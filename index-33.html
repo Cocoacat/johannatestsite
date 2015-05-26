@@ -31,18 +31,6 @@
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-.auto-style2 {
-	overflow: hidden;
-	margin-top: -2px;
-	border-left-style: solid;
-}
-.auto-style3 {
-	padding-right: 10px;
-}
-.auto-style4 {
-	padding-left: 8px;
-	padding-top: 10px;
-}
 </style>
 <!--[if lt IE 9]>
  <div style=' clear: both; text-align:center; position: relative;'>
@@ -55,6 +43,62 @@
 
 
 <![endif]-->
+<title>Rotating Testimonials with bxSlider</title>
+<script src="jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="jquery.bxslider.min.js" type="text/javascript"></script>
+<link href="jquery.bxslider.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+blockquote
+{
+    clear: both;
+    font-style: italic;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 10px 0 50px;
+    position: relative;
+    quotes: none;
+    background: url(https://dl.dropbox.com/u/96099766/RotatingTestimonial/open-quote.png) 0 0 no-repeat;
+    border: 0px;
+    font-size: 120%;
+    line-height: 200%;
+}
+.auto-style2 {
+	overflow: hidden;
+	margin-top: -2px;
+	text-align: center;
+}
+.auto-style5 {
+	font-size: medium;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.auto-style6 {
+	font-size: medium;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	text-align: center;
+}
+.auto-style7 {
+	font-size: large;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.auto-style8 {
+	font-size: large;
+	font-weight: normal;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	text-decoration: underline;
+}
+</style>
+<script type="text/javascript">
+         $(document).ready(function () {           
+             $('.bxslider').bxSlider({
+                 mode: 'vertical',
+                 slideMargin: 3,
+                 auto:true
+             });             
+         });
+    </script>
 </head>
 
 <body>
@@ -96,101 +140,19 @@
     <!--=====================
           Content
 ======================-->
-<section class="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 30, 2014!</div>
+<section class="content"><div class="ic"></div>
   <div class="container">
     <div class="row">
-      <div class="grid_7">
-        <div class="blog">
-          <div class="blog_title"><a href="#">Hivamus at magna non nuncerto limonit </a></div>
-          <img src="images/page4_img1.jpg" alt="">
-          <p>Rehoncus. Aliquam nibh antegestas id ictum ado. Praesenterto faucibus maleada faucibusnec laeetert metus id laoreet. </p>
-          <p>Nullam consectetur orci sed nulla facilisisequaterto. Curabitur vel lorem sit amet nulla perermentum. Aliquam nibh ante, egestas id dictum a, commodo luctus libero. Raesent faucibus malesuada faucibus. Donecertolin laoreet metus id laoreet malesuadarem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequat. </p>
-          <table>
-          <tbody>
-            <tr>
-              <td><time datetime="2014-01-01">
-                <span class="fa fa-calendar"></span>
-                January 20, 2014   
-              </time> </td>
-              <td><a href="#"><div class="fa fa-user"></div> Admin</a></td>
-              <td><a href="#"><span class="fa fa-link"></span> Permalink</a></td>
-            </tr>
-            <tr>
-              <td><div class="fa fa-bookmark"></div> Uncategorized  </td>
-              <td colspan="2"><div class="fa fa-tag"></div> No tags</td>
-            </tr>
-            <tr>
-              <td><div class="fa fa-comments"></div> No commentts   </td>
-              <td colspan="2"><div class="fa fa-eye"></div>182
-              <div class="fa fa-thumbs-up"></div>0
-              <div class="fa fa-thumbs-down"></div>0</td>
-            </tr>
-          </tbody>
-        </table>
-          <a href="#" class="btn">more</a>
-        </div>
-        <div class="blog">
-          <div class="blog_title"><a href="#">Givamus at magna non nuncerto limonit </a></div>
-          <img src="images/page4_img2.jpg" alt="">
-          <p>Johoncus. Aliquam nibh antegestas id ictum ado. Praesenterto faucibus maleada faucibusnec laeetert metus id laoreet wer.</p>
-          <p>Ollam consectetur orci sed nulla facilisisequaterto. Curabitur vel lorem sit amet nulla perermentum. Aliquam nibh ante, egestas id dictum a, commodo luctus libero. Raesent faucibus malesuada faucibus. Donecertolin laoreet metus id laoreet malesuadarem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequat. </p>
-          <table>
-          <tbody>
-            <tr>
-              <td><time datetime="2014-01-01">
-                <span class="fa fa-calendar"></span>
-                January 20, 2014   
-              </time> </td>
-              <td><a href="#"><div class="fa fa-user"></div> Admin</a></td>
-              <td><a href="#"><span class="fa fa-link"></span> Permalink</a></td>
-            </tr>
-            <tr>
-              <td><div class="fa fa-bookmark"></div> Uncategorized  </td>
-              <td colspan="2"><div class="fa fa-tag"></div> No tags</td>
-            </tr>
-            <tr>
-              <td><div class="fa fa-comments"></div> No commentts   </td>
-              <td colspan="2"><div class="fa fa-eye"></div>182
-              <div class="fa fa-thumbs-up"></div>0
-              <div class="fa fa-thumbs-down"></div>0</td>
-            </tr>
-          </tbody>
-        </table>
-          <a href="#" class="btn">more</a>
-        </div>
-        <div class="blog">
-          <div class="blog_title"><a href="#">At magna non nuncerto limonit nelowert </a></div>
-          <img src="images/page4_img3.jpg" alt="">
-          <p>Aliquam nibh antegestas id ictum ado. Praesenterto faucibus maleada faucibusnec laeetert metus id laoreet </p>
-          <p>Nullam consectetur orci sed nulla facilisisequaterto. Curabitur vel lorem sit amet nulla perermentum. Aliquam nibh ante, egestas id dictum a, commodo luctus libero. Raesent faucibus malesuada faucibus. Donecertolin laoreet metus id laoreet malesuadarem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequater. </p>
-          <table>
-          <tbody>
-            <tr>
-              <td><time datetime="2014-01-01">
-                <span class="fa fa-calendar"></span>
-                January 20, 2014   
-              </time> </td>
-              <td><a href="#"><div class="fa fa-user"></div> Admin</a></td>
-              <td><a href="#"><span class="fa fa-link"></span> Permalink</a></td>
-            </tr>
-            <tr>
-              <td><div class="fa fa-bookmark"></div> Uncategorized  </td>
-              <td colspan="2"><div class="fa fa-tag"></div> No tags</td>
-            </tr>
-            <tr>
-              <td><div class="fa fa-comments"></div> No commentts   </td>
-              <td colspan="2"><div class="fa fa-eye"></div>182
-              <div class="fa fa-thumbs-up"></div>0
-              <div class="fa fa-thumbs-down"></div>0</td>
-            </tr>
-          </tbody>
-        </table>
-          <a href="#" class="btn">more</a>
-        </div>
-      </div>
+        <div class="grid_7">
+			<div class="blog"><div class="blog_title"><span lang="en-gb">This 
+				Blog is under construction<br>Please come back later!</span><a href="#"> </a></div>
+				<!---<script src="http://feeds.feedburner.com/blogspot/WnPaZD?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/blogspot/WnPaZD"></a><br/>Powered by FeedBurner</p> </noscript>--->
+        
+        	</div>
+		</div>
       <div class="grid_4 preffix_1">
-        <h2>Categories</h2>
-        <ul class="list">
+        <!--<h2>Categories</h2>-->
+        <!--<ul class="list">
           <li><a href="#">Herem ipsum dolor </a></li>
           <li><a href="#">sit Komet,tetur </a></li>
           <li><a href="#">Odipiscingt</a></li>
@@ -198,38 +160,37 @@
           <li><a href="#">Neque Loacilisis, sit </a></li>
           <li><a href="#">Amet ultret</a></li>
           <li><a href="#">Icies erat rutrums </a></li>
-        </ul>
-        <h2>Recent Posts</h2>
+        </ul>-->
+        <!--<h2>Recent Posts</h2>-->
         <div class="block3">
-          <img src="images/page4_img4.jpg" alt="" class="img_inner noresize fleft">
+          <!--<img src="images/page4_img4.jpg" alt="" class="img_inner noresize fleft">
           <div class="extra_wrapper">
             <div class="text1 color1">
               <time datetime="2014-01-01">20-05-2014</time>
               <a href="#">Hivamus at magnate </a>
             </div>Rehoncus. Aliquam nibh tegestas id ictum ado. Praesentertoaucibus maleada faucibusnec <a href="#" class="color1">[...]</a>
-          </div>
+          </div>-->
         </div>
-        <div class="block3">
-          <img src="images/page4_img5.jpg" alt="" class="img_inner noresize fleft">
+        <div class="auto-style2">
+          <!--<img src="images/page4_img5.jpg" alt="" class="img_inner noresize fleft">
           <div class="extra_wrapper">
             <div class="text1 color1">
               <time datetime="2014-01-01">25-05-2014</time>
               <a href="#">Livamus aot magte </a>
             </div>Tehoncus. Aliquam nibh tegestas id ictum ado. Praesentertoaucibus maleada faucibusnece <a href="#" class="color1">[...]</a>
-          </div>
+          </div>--><br><br><br>
+        	<span lang="en-gb"><br><br>
+			<h3 class="auto-style7">Beauty Tips!&nbsp;&nbsp;<i class="fa fa-arrow-circle-down"></i>
+</h3>
+			<p class="auto-style8">That really do make a difference</p>
+			
+			</span>
         </div>
-        <div class="block3">
-          <img src="images/page4_img6.jpg" alt="" class="img_inner noresize fleft">
-          <div class="extra_wrapper">
-            <div class="text1 color1">
-              <time datetime="2014-01-01">28-05-2014</time>
-              <a href="#">Kivamus aagnateme </a>
-            </div>
-            Mehoncusiquam nibh tegestas id ictum ado. Praesentertoaucibus maleada faucibusnec dert <a href="#" class="color1">[...]</a>
-          </div>
-        </div>           <br> <a class="twitter-timeline"  href="https://twitter.com/BeBlushandBloom" data-widget-id="600951054096793600">Tweets by @BeBlushandBloom</a>
+         <marquee bgcolor="#AABEAD" scrollamount="2" direction="up" loop="true" width="100%"> <center> <font color="#ffffff"><strong> GET AT LEAST 8 HRS SLEEP<br>.....<br> AVOID REFINED SUGAR<br>.....<br> EXERCISE DAILY<br>.....<br>DRINK PLENTY OF WATER<br>..... <br> BE HAPPY AND MANAGE STRESS<br>.....<br>ADD OMEGA-3 FATTY ACIDS<br> TO YOUR DIET </strong></font></center></marquee><br><br><br><h3 class="ta__center">
+		  <span class="auto-style5">MY TWEETS</span></h3><br> <a class="twitter-timeline"  href="https://twitter.com/BeBlushandBloom" data-widget-id="600951054096793600">Tweets by @BeBlushandBloom</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          <br><br><iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fblushandbloombeauty.co.uk&amp;width=490&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=true&amp;height=435" scrolling="yes" frameborder="0" style="border:none; overflow:hidden;width:300px; height:600px; background:white; float:left; "allowTransparancy="true"></iframe>
+          <br><br><br><h3 class="auto-style6">FOLLOW ME ON FACEBOOK</h3>
+		  <br><iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fblushandbloombeauty.co.uk&amp;width=490&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=true&amp;height=435" scrolling="yes" frameborder="0" style="border:none; overflow:hidden;width:300px; height:600px; background:white; float:left; "allowTransparancy="true"></iframe>
       </div>
     </div>
   </div>
