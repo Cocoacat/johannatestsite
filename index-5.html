@@ -99,6 +99,119 @@ blockquote
              });             
          });
     </script>
+<title>Testimonial Slider | Code Affair</title>
+<style>
+*{	/*some reset code, nothing else*/
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+#testimonials{
+	background: #f8f8f8 url('quote.png') no-repeat 17px 21px;
+	width:250px;
+	margin:50px auto;
+	padding: 20px 20px 40px 55px;
+	position:relative;
+}
+#testimonials .testimonial{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:175px;
+	z-index:1;
+}
+#testimonials h2{
+	color:#AABEAD;
+	font-size:22px;
+	font-style:normal;
+	line-height:22px;
+	margin-bottom:10px;
+}
+#test_container{
+	position:relative;
+	overflow:hidden;
+}
+#testimonials .testimonial_text{
+	font-size:14px;
+	font-family:verdana;
+	font-style:italic;
+}
+#testimonials .testimonial_name{
+	font-size:14px;
+	margin:10px auto 3px;
+	font-style:normal;
+	font-family:arial;
+}
+#testimonials .testimonial_designation{
+	font-size: 12px;
+	line-height: 14px;
+	font-family:verdana;
+}
+#t_pagers{
+	position:absolute;
+	left:40%;
+	bottom:10px;
+	z-index:2;
+}
+#t_pagers .pager{
+	display:inline-block;
+	text-decoration:none;
+	width:10px;
+	min-height:10px;
+	margin-right:5px;
+	background:#ccc;
+	border-radius:50%;
+	cursor:pointer;
+}
+#t_pagers .pager.active{
+	background:#f25911;
+}
+</style>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	var w,mHeight,tests=$("#testimonials");
+	w=tests.outerWidth();
+	mHeight=0;
+	tests.find(".testimonial").each(function(index){
+		$("#t_pagers").find(".pager:eq(0)").addClass("active");	//make the first pager active initially
+		if(index==0)
+			$(this).addClass("active");	//make the first slide active initially
+		if($(this).height()>mHeight)	//just finding the max height of the slides
+			mHeight=$(this).height();
+		var l=index*w;				//find the left position of each slide
+		$(this).css("left",l);			//set the left position
+		tests.find("#test_container").height(mHeight);	//make the height of the slider equal to the max height of the slides
+	});
+	$(".pager").on("click",function(e){	//clicking action for pagination
+		e.preventDefault();
+		next=$(this).index(".pager");
+		clearInterval(t_int);	//clicking stops the autoplay we will define later
+		moveIt(next);
+	});
+	var t_int=setInterval(function(){	//for autoplay
+		var i=$(".testimonial.active").index(".testimonial");
+		if(i==$(".testimonial").length-1)
+			next=0;
+		else
+			next=i+1;
+		moveIt(next);
+	},3000);
+});
+function moveIt(next){	//the main sliding function
+	var c=parseInt($(".testimonial.active").removeClass("active").css("left"));	//current position
+	var n=parseInt($(".testimonial").eq(next).addClass("active").css("left"));	//new position
+	$(".testimonial").each(function(){	//shift each slide
+		if(n>c)
+			$(this).animate({'left':'-='+(n-c)+'px'});
+		else
+			$(this).animate({'left':'+='+Math.abs(n-c)+'px'});
+	});
+	$(".pager.active").removeClass("active");	//very basic
+	$("#t_pagers").find(".pager").eq(next).addClass("active");	//very basic
+}
+</script>
 </head>
 
 <body>
@@ -179,18 +292,32 @@ blockquote
               <a href="#">Livamus aot magte </a>
             </div>Tehoncus. Aliquam nibh tegestas id ictum ado. Praesentertoaucibus maleada faucibusnece <a href="#" class="color1">[...]</a>
           </div>--><br><br><br>
-        	<span lang="en-gb"><br><br>
-			<h3 class="auto-style7">Beauty Tips!&nbsp;&nbsp;<i class="fa fa-arrow-circle-down"></i>
-</h3>
-			<p class="auto-style8">That really do make a difference</p>
-			
-			</span>
+        	
         </div>
-         <marquee bgcolor="#AABEAD" scrollamount="2" direction="up" loop="true" width="100%"> <center> <font color="#ffffff"><strong> GET AT LEAST 8 HRS SLEEP<br>.....<br> AVOID REFINED SUGAR<br>.....<br> EXERCISE DAILY<br>.....<br>DRINK PLENTY OF WATER<br>..... <br> BE HAPPY AND MANAGE STRESS<br>.....<br>ADD OMEGA-3 FATTY ACIDS<br> TO YOUR DIET </strong></font></center></marquee><br><br><br><h3 class="ta__center">
-		  <span class="auto-style5">MY TWEETS</span></h3><br> <a class="twitter-timeline"  href="https://twitter.com/BeBlushandBloom" data-widget-id="600951054096793600">Tweets by @BeBlushandBloom</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          <br><br><br><h3 class="auto-style6">FOLLOW ME ON FACEBOOK</h3>
-		  <br><iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fblushandbloombeauty.co.uk&amp;width=490&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=true&amp;height=435" scrolling="yes" frameborder="0" style="border:none; overflow:hidden;width:300px; height:600px; background:white; float:left; "allowTransparancy="true"></iframe>
+        <br><br><h3 class="ta__center">
+		 <p class="auto-style8">WHAT ARE CLIENTS SAYING!&nbsp;&nbsp;<i class="fa fa-arrow-circle-down"></i></p><span class="auto-style5"> 
+		  <a name="About_Blush_and_Bloom_Beauty">About Blush and Bloom Beauty</a></span></h3><div id="testimonials">
+		<h2>TESTIMONIALS</h2>
+		<div id="test_container">
+			<div class="testimonial">
+				<div class="testimonial_text"><strong>Thank you so much Johanna.</strong><br>I look forward to my<br><strong>next appointment</strong></div>
+				<h3 class="testimonial_name">- Katy Lewis</h3>
+				<div class="testimonial_designation">&nbsp;&nbsp;&nbsp;Leeds.</div>
+			</div>
+			<div class="testimonial">
+				<div class="testimonial_text">Johanna is professional, competent and caring. Wonderful massage. Had my best sleep in months. I will be returning!</div>
+				<h3 class="testimonial_name">- Sarah Fawcett</h3>
+				<div class="testimonial_designation">&nbsp;&nbsp;&nbsp;Castleford.</div>
+			</div>
+			<div class="testimonial">
+				<div class="testimonial_text">This was a fantastic experience that I totally recommend. Johanna was brilliant and I felt like I was walking on air afterwards. I have already booked in for another appointment.</div>
+				<h3 class="testimonial_name">- Jenny Taylor</h3>
+				<div class="testimonial_designation">&nbsp;&nbsp;&nbsp;Beeston</div>
+			</div>
+		</div>
+		<div id="t_pagers"><a class="pager"></a><a class="pager"></a><a class="pager"></a></div>
+</div>
+</div>
       </div>
     </div>
   </div>
